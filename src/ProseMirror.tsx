@@ -49,7 +49,7 @@ export default forwardRef<Handle, Props>(function ProseMirror(
 ): JSX.Element {
     const root = useRef<HTMLDivElement>(null!);
     const initialProps = useRef(props);
-    const viewRef = useRef<EditorView<any> | null>(null);
+    const viewRef = useRef<any| null>(null);
     // If this is a non-initial render, update the editor view with
     // the React render.
     // - First update editor state using `EditorView#updateState()`.
